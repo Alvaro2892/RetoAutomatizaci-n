@@ -5,6 +5,9 @@ import net.serenitybdd.screenplay.Actor;
 import net.serenitybdd.screenplay.Question;
 import net.serenitybdd.screenplay.questions.Text;
 
+
+/*Creo una variable llamada "word" para compararla con el dato que traigo mapeado y así verificar si lo
+que tengo en mi último paso del gherkin "Entonces " es igual a la palabra mapeada de la página*/
 public class CheckQ implements Question<Boolean>
 {
     String word;

@@ -1,5 +1,7 @@
 package co.com.reto.saucedemo.model;
 
+//Creo y inicializo las variables que utilizaré cuando necesite ingresar algún dato en un formulario
+
 public class InitializeObjects
 {
     private String username;

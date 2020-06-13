@@ -8,14 +8,15 @@ import net.serenitybdd.screenplay.Tasks;
 import net.serenitybdd.screenplay.actions.Click;
 import net.serenitybdd.screenplay.actions.Enter;
 import net.serenitybdd.screenplay.actions.Scroll;
-
 import java.util.List;
-
 import static co.com.reto.saucedemo.util.Constants.ZERO;
 
+
+/*Creo una variable "data" que me guarde
+  lo que la lista me vaya trayendo de la clase
+  InitializeObjects y así poder pasarselo a la caja de teexto mapeada en la clase GetIn */
 public class ComeIn implements Task
 {
-
     private List<InitializeObjects> data;
 
     public ComeIn (List<InitializeObjects> data)
@@ -32,6 +33,10 @@ public class ComeIn implements Task
     @Override
     public <T extends Actor> void performAs(T actor)
     {
+        /*La variable info la creo con la intención de ahorrarme de escribir "data.get(ZERO)"
+        cada vez que necesito ingresar un dato a un formulario y la contaste ZERO lo único que me
+        trae es el número cero lo hago con la intención de no pasar datos quemados en esta clase*/
+
         InitializeObjects info = data.get(ZERO);
         actor.attemptsTo(Click.on(GetIn.USERNAME),
                 Enter.theValue(info.getUsername()).into(GetIn.USERNAME),

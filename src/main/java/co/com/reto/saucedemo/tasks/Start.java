@@ -8,7 +8,8 @@ import net.serenitybdd.screenplay.actions.Open;
 
 public class Start implements Task
 {
-
+    //creamos una userinterface con el proposito de guardar la url de la
+    // página y así respetar los principios solid
     private EnterWebSite enterWebSite;
 
     public static Start webSite()
@@ -19,6 +20,7 @@ public class Start implements Task
     @Override
     public <T extends Actor> void performAs(T actor)
     {
+        //llamamos al actor para que ejecute la acción de levantar el navegador con la url asignada
         actor.attemptsTo(Open.browserOn(enterWebSite));
     }
 }

@@ -1,4 +1,8 @@
+#Creamos nuestra feature con los casos de pruebas que se van a ejecutar, en este caso como
+#podemos ver a continuación se hizo un feature totalmente en español
+
 # language: es
+
 Característica: Como usuario quiero comprar un producto en la página web de SWAGLABS
 
   Escenario: Comprar un producto en la página web de SWAGLABS

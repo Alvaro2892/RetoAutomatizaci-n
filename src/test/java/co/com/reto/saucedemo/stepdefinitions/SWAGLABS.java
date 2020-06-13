@@ -14,6 +14,16 @@ import static net.serenitybdd.screenplay.GivenWhenThen.seeThat;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorCalled;
 import static net.serenitybdd.screenplay.actors.OnStage.theActorInTheSpotlight;
 
+/*En nuestro stepdefinitions vamos a decirle a nuestra automatización que paso va a seguir
+  para ejecutar con éxito la funcionalidad que se está probando en esta automatización.
+  Vemos que consta de 3 pasos.
+  En el primer paso "DADO" es donde levantamos el navegador con la url
+  de la página a la cuál automatizamos.
+  En el segundo paso "CUANDO" es donde está toda la magia de nuestra automatización,
+  aquí es donde hacemos todas las interaciones con la página (click, scroll, inserción de datos, etc).
+  En el tercer paso hacemos la question o verificación del mensaje final */
+
+
 public class SWAGLABS
 {
     @Dado("^que el actor abra el navegador y quiera comprar un producto$")
@@ -23,6 +33,9 @@ public class SWAGLABS
     }
 
     @Cuando("^el busque y compre el producto deseado$")
+    //Aquí creamos una lista y le pasamos la clase "InitializeObjects" del paquete model para que
+    //me guarde en data todas las variables que le paso en el feature para así mas tarde
+    // utilizarla en los formularios
     public void elBusqueYCompreElProductoDeseado(List<InitializeObjects> data)
     {
         theActorInTheSpotlight().attemptsTo(ComeIn.WebSite(data));

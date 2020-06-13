@@ -3,6 +3,8 @@ package co.com.reto.saucedemo.userinterface;
 import net.serenitybdd.screenplay.targets.Target;
 import org.openqa.selenium.By;
 
+//La clase GetIn la utilizo para mapear todos los elementos a los cuales necesito acceder
+
 public class GetIn
 {
     public static final Target USERNAME = Target.the("Enter Username").located(By.id("user-name"));
